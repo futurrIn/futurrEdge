@@ -1,0 +1,325 @@
+.mockupContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.phoneGlow {
+  position: absolute;
+  width: 280px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(132, 0, 255, 0.4) 0%, rgba(0, 240, 255, 0.2) 100%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.phoneFrame {
+  position: relative;
+  width: 280px;
+  height: 580px;
+  background: #111;
+  border-radius: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 20px 50px rgba(0,0,0,0.5);
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background: #111;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 10;
+}
+
+.phoneScreen {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(132, 0, 255, 0.05) 100%);
+  padding: 60px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.avatarWrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.profileName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.profileTitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.saveBtn {
+  width: 100%;
+  background: linear-gradient(90deg, #ff7a00, #ff9900);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.actionGrid {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.actionBtn {
+  flex: 1;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.mockContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mockRow {
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+/* Floating Cards Base */
+.floatingCard {
+  position: absolute;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Specific Cards */
+.qrCard {
+  top: 100px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  gap: 8px;
+}
+
+.qrIcon {
+  color: #fff;
+}
+
+.cardLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.rateCard {
+  top: 60px;
+  right: -20px;
+  width: 120px;
+  padding: 20px 16px;
+  gap: 8px;
+  border-color: rgba(132, 0, 255, 0.3);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.qrIconSmall {
+  color: #fff;
+  margin: 4px 0;
+}
+
+.tapBtn {
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.leadCard {
+  top: 300px;
+  left: -40px;
+  flex-direction: row;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.leadIconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0, 153, 255, 0.1);
+  color: #0099ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTextCol h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.cardTextCol p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.viewsCard {
+  bottom: 80px;
+  left: 0;
+  flex-direction: row;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.viewsIconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0, 200, 83, 0.1);
+  color: #00c853;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nfcCard {
+  bottom: 120px;
+  right: -60px;
+  width: 220px;
+  height: 130px;
+  background: linear-gradient(135deg, #222 0%, #111 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.nfcTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nfcBadge {
+  background: rgba(255, 153, 0, 0.1);
+  color: #ff9900;
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.nfcBottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nfcDot {
+  width: 6px;
+  height: 6px;
+  background: #ff9900;
+  border-radius: 50%;
+}
+
+.nfcBottom h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mockupContainer {
+    transform: scale(0.8);
+    height: 500px;
+  }
+  
+  .qrCard { left: 20px; }
+  .rateCard { right: 0px; }
+  .leadCard { left: 0px; }
+  .viewsCard { left: 20px; }
+  .nfcCard { right: -20px; }
+}

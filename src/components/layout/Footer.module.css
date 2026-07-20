@@ -1,0 +1,327 @@
+.footer {
+  background: #09090b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 100px 0 40px;
+  color: #fff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* CTA Banner Container */
+.ctaBanner {
+  background: linear-gradient(135deg, #7c3aed 0%, #0891b2 100%); /* Purple-Teal gradient */
+  border-radius: 28px;
+  padding: 60px 40px;
+  text-align: center;
+  margin-bottom: 80px;
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25), 0 0 40px rgba(8, 145, 178, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Title text */
+.ctaTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0b0f19; /* High-contrast dark charcoal color */
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Subtitle text */
+.ctaSubtitle {
+  color: rgba(11, 15, 25, 0.85); /* Slightly muted dark text */
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+/* Buttons Row */
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Primary dark button (Get Your Quote) */
+.ctaPrimaryBtn {
+  background: #0b0f19;
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #0b0f19;
+}
+
+.ctaPrimaryBtn:hover {
+  background: transparent;
+  color: #0b0f19;
+  transform: translateY(-2px);
+}
+
+/* Secondary outline button (Build Your Free Portfolio) */
+.ctaSecondaryBtn {
+  background: rgba(11, 15, 25, 0.05);
+  color: #0b0f19;
+  border: 1.5px solid #0b0f19;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaSecondaryBtn:hover {
+  background: #0b0f19;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  .ctaBanner {
+    padding: 40px 24px;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaPrimaryBtn,
+  .ctaSecondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 64px;
+  margin-bottom: 80px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Balanced spacing between the logo icon and text */
+  text-decoration: none;
+}
+
+.brandName {
+  font-family: var(--font-orbitron), sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.logoIcon {
+  height: 64px; /* Enlarged logo size */
+  width: auto;
+  border-radius: 12px; /* Smooth rounded corners */
+  display: block;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialCircle:hover {
+  background: var(--accent-purple);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.linksCol a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.linksCol a:hover {
+  color: var(--accent-cyan);
+}
+
+.newsletterCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.newsletterHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 16px 56px 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.inputWrapper input:focus {
+  border-color: var(--accent-cyan);
+}
+
+.subscribeBtn {
+  position: absolute;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-purple);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  background: var(--accent-cyan);
+}
+
+.agreeLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.agreeLabel input {
+  accent-color: var(--accent-purple);
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.bottomLinks a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bottomLinks a:hover {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

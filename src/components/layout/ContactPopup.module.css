@@ -1,0 +1,233 @@
+.overlayMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.overlayBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.popupCard {
+  background: rgba(20, 20, 22, 0.7);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.popupHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(124, 58, 237, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.popupTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.popupSubtitle {
+  color: var(--text-muted, #a1a1aa);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.popupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroupRow {
+  display: flex;
+  gap: 16px;
+}
+
+.fieldBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldBox label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.fieldBox input,
+.selectInput,
+.fieldBox textarea {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.selectInput {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+.selectInput option {
+  background-color: #121214;
+  color: #ffffff;
+}
+
+.fieldBox textarea {
+  border-radius: 12px;
+  resize: none;
+}
+
+.fieldBox input:focus,
+.selectInput:focus,
+.fieldBox textarea:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.1);
+}
+
+.submitBtn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.submitBtn:hover {
+  background: #06b6d4;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(6, 182, 212, 0.25);
+}
+
+/* Success block styling */
+.successBlock {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.awardIcon {
+  color: #06b6d4;
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.96); opacity: 0.8; }
+}
+
+.successTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.successText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted, #a1a1aa);
+  margin-bottom: 24px;
+}
+
+.successText strong {
+  color: #fff;
+}
+
+.dismissProgress {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .popupCard {
+    padding: 24px;
+  }
+  .formGroupRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .popupTitle {
+    font-size: 1.4rem;
+  }
+}

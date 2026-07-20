@@ -1,0 +1,242 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.hero {
+  position: relative;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(132, 0, 255, 0.08) 0%, rgba(0, 240, 255, 0.03) 40%, rgba(9, 9, 11, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.gridSection {
+  padding: 8rem 0;
+  background: var(--background);
+}
+
+.sectionHeader {
+  margin-bottom: 4rem;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.labelIcon {
+  width: 12px;
+  height: 12px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.featuredBrand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.featuredText h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.featuredText p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.featuredVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: scale(0.75);
+  transform-origin: center right;
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(0, 240, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.ctaSection {
+  padding: 4rem 0 8rem;
+}
+
+.ctaBox {
+  background: linear-gradient(135deg, rgba(132, 0, 255, 0.1) 0%, rgba(0, 240, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  padding: 5rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaBox h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.ctaBox p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--text);
+  color: var(--background);
+  padding: 8px 8px 8px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.btnIconWrapperPrimary {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper {
+  color: var(--accent-cyan);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .heroText {
+    margin: 0 auto;
+  }
+  .featuredBrand {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 3rem;
+    text-align: center;
+  }
+  .featuredText {
+    order: 2;
+  }
+  .featuredVisual {
+    order: 1;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    min-height: 60vh;
+  }
+  
+  .gridCard {
+    padding: 2rem;
+  }
+  
+  .ctaBox {
+    padding: 3rem 1.5rem;
+  }
+}
