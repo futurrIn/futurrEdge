@@ -1,10 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { QrCode, Star, Users, BarChart3, Wifi, UserCircle } from 'lucide-react';
 import styles from './PortidHeroMockup.module.css';
 
 export default function PortidHeroMockup() {
-  const floatVariants = {
+  const floatVariants: Variants = {
     animate: (i: number) => ({
       y: [0, -10, 0],
       transition: {
