@@ -25,6 +25,10 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "Futurr Edge | Premium Web Development & AI Automation Agency",
   description: "We design premium websites and AI automation systems that turn visitors into customers. Book a free consultation with Futurr Edge today.",
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  }
 };
 
 export default function RootLayout({
