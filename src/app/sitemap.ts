@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { locationSeoData } from '@/data/locationSeoData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.futurredge.com';
@@ -39,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85, // High priority for keyword-rich service pages
   }));
 
-  return [...sitemapEntries, ...serviceEntries];
+  const locationEntries: MetadataRoute.Sitemap = locationSeoData.map((data) => ({
+    url: `${baseUrl}/${data.slug}/website-development`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.85, // High priority for local SEO
+  }));
+
+  return [...sitemapEntries, ...serviceEntries, ...locationEntries];
 }
