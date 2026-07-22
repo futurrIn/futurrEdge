@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Inter, Space_Grotesk, Orbitron } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Footer />
           <ContactPopup />
         </SmoothScrollProvider>
+        <GoogleAnalytics gaId="G-49PBYYRQDG" />
       </body>
     </html>
   );
