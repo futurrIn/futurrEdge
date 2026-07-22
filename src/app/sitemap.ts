@@ -1,15 +1,21 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Replace with the actual production URL
   const baseUrl = 'https://www.futurredge.com';
 
-  const routes = [
-    '',
-    '/about',
-    '/contact',
-    '/portfolio',
-    '/services',
+  const coreRoutes = [
+    { url: '', priority: 1.0, changeFrequency: 'weekly' },
+    { url: '/services', priority: 0.9, changeFrequency: 'weekly' },
+    { url: '/portfolio', priority: 0.9, changeFrequency: 'monthly' },
+    { url: '/about', priority: 0.8, changeFrequency: 'monthly' },
+    { url: '/contact', priority: 0.8, changeFrequency: 'monthly' },
+    { url: '/subsidiaries', priority: 0.7, changeFrequency: 'monthly' },
+    { url: '/terms', priority: 0.3, changeFrequency: 'yearly' },
+    { url: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
+  ];
+
+  // High-demand keyword optimized service routes
+  const serviceRoutes = [
     '/services/website-development',
     '/services/mobile-app-development',
     '/services/ai-automation',
@@ -17,14 +23,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/lms',
     '/services/e-commerce',
     '/services/growth-marketing',
-    '/terms',
-    '/privacy',
   ];
 
-  return routes.map((route) => ({
+  const sitemapEntries: MetadataRoute.Sitemap = coreRoutes.map((route) => ({
+    url: `${baseUrl}${route.url}`,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency as "weekly" | "monthly" | "yearly" | "always" | "hourly" | "daily" | "never",
+    priority: route.priority,
+  }));
+
+  const serviceEntries: MetadataRoute.Sitemap = serviceRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.startsWith('/services') ? 0.8 : 0.6,
+    changeFrequency: 'weekly', // Services often updated with new case studies or features
+    priority: 0.85, // High priority for keyword-rich service pages
   }));
+
+  return [...sitemapEntries, ...serviceEntries];
 }
