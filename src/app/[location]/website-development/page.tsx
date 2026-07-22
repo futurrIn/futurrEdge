@@ -17,7 +17,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const data = locationSeoData.find((d) => d.slug === params.location);
+  const resolvedParams = await params;
+  const data = locationSeoData.find((d) => d.slug === resolvedParams.location);
   
   if (!data) {
     return {};
@@ -32,8 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function LocationWebDevelopmentPage({ params }: Props) {
-  const data = locationSeoData.find((d) => d.slug === params.location);
+export default async function LocationWebDevelopmentPage({ params }: Props) {
+  const resolvedParams = await params;
+  const data = locationSeoData.find((d) => d.slug === resolvedParams.location);
 
   if (!data) {
     notFound();
