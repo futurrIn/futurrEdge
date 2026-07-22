@@ -96,7 +96,7 @@ export default function Footer() {
         <div className={styles.bottomBar}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <p>
-              © {new Date().getFullYear()} <a href="https://futurr.in" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text)'}>Futurr Innovations and Research</a>. All rights reserved. | <a href="https://futurrinnovations.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text)'}>futurrinnovations.com</a>
+              © {new Date().getFullYear()} Futurr Edge (futurredge.com) is our web development & AI automation brand, built and maintained by <a href="https://futurr.in" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text)'}>Futurr Innovations and Research</a>.
             </p>
           </div>
           <div className={styles.bottomLinks}>
