@@ -166,6 +166,22 @@ export default function Home() {
 
   return (
     <div className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Futurr Edge",
+            "url": "https://www.futurredge.com",
+            "logo": "https://www.futurredge.com/logo.png",
+            "sameAs": [
+              "https://www.instagram.com/futurr_edge",
+              "https://www.facebook.com/share/1HXqhfAMmF/"
+            ]
+          })
+        }}
+      />
 
       {/* ── CINEMATIC CURTAIN INTRO ── */}
       <AnimatePresence>
